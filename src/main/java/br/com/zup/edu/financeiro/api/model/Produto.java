@@ -28,6 +28,10 @@ public class Produto {
         this.valor = valor;
     }
 
+    public Produto(Long produtoId) {
+        this.id = produtoId;
+    }
+
     public Long getId() {
         return id;
     }

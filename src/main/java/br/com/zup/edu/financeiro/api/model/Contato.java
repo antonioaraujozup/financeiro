@@ -18,7 +18,7 @@ public class Contato {
     @Column(nullable = false)
     private String empresa;
 
-    @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "contato")
+    @OneToMany(cascade = { CascadeType.PERSIST, CascadeType.REMOVE }, mappedBy = "contato")
     private List<Telefone> telefones = new ArrayList<>();
 
     /**

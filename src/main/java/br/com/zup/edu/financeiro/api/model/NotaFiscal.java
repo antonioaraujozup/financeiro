@@ -17,7 +17,7 @@ public class NotaFiscal {
     @Column(nullable = false)
     private BigDecimal total;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = { CascadeType.PERSIST, CascadeType.REMOVE })
     private List<Item> itens;
 
     /**

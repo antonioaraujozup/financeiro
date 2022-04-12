@@ -18,6 +18,9 @@ public class Contato {
     @Column(nullable = false)
     private String empresa;
 
+    @Column(nullable = false)
+    private Boolean ativo = true;
+
     @OneToMany(cascade = { CascadeType.PERSIST, CascadeType.REMOVE }, mappedBy = "contato")
     private List<Telefone> telefones = new ArrayList<>();
 
@@ -43,6 +46,10 @@ public class Contato {
 
     public String getEmpresa() {
         return empresa;
+    }
+
+    public Boolean getAtivo() {
+        return ativo;
     }
 
     public List<Telefone> getTelefones() {
